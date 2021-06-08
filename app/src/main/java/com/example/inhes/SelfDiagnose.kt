@@ -15,7 +15,7 @@ class SelfDiagnose : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnCovidTest.setOnClickListener {
-            val intent = Intent(this, SearchFaskes::class.java)
+            val intent = Intent(this, SelfDiagnose2::class.java)
             startActivity(intent)
 
         }

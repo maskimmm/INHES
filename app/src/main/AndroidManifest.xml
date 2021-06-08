@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.INHES">
-        <activity android:name=".MedicalKnowledge2"></activity>
+        <activity android:name=".SelfDiagnose2"></activity>
+        <activity android:name=".MedicalKnowledge2" />
         <activity android:name=".MedicalKnowledge" />
         <activity android:name=".Splash">
             <intent-filter>

@@ -53,6 +53,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-database:20.0.0'
 
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
 //    implementation 'org.tensorflow:tensorflow-lite:2.2.0'
 //    // The GPU delegate library is optional. Depend on it as needed.
 //    implementation 'org.tensorflow:tensorflow-lite-gpu:2.2.0'
