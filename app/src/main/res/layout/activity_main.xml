@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Hello!\nWelcome Back!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/navigator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="24dp"
+            android:text="Navigator"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+        <LinearLayout
+            android:id="@+id/llMenuBar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/navigator">
+
+            <Button
+                android:id="@+id/btnSelfDiagnose"
+                android:layout_width="170sp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="5dp"
+                android:drawableTop="@drawable/checkup"
+                android:enabled="true"
+                android:text="Self Diagnose" />
+
+            <Button
+                android:id="@+id/btnAppointment"
+                android:layout_width="170sp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="5dp"
+                android:drawableTop="@drawable/appointment"
+                android:text="Appointment" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMenuBar2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llMenuBar1">
+
+            <Button
+                android:id="@+id/btnMedicalKnowledge"
+                android:layout_width="170sp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="5dp"
+                android:drawableTop="@drawable/book"
+                android:text="Medical Knowledge"
+                android:enabled="true"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btnSearchFasKes"
+                android:layout_width="170sp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="5dp"
+                android:drawableTop="@drawable/hospital"
+                android:enabled="true"
+                android:text="Search Faskes"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMenuBar3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llMenuBar2">
+
+            <Button
+                android:id="@+id/btnSetting"
+                android:layout_width="170sp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="5dp"
+                android:enabled="false"
+                android:text="Settings"/>
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="170sp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="Log Out"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvActiveAppointment"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="19dp"-->
+<!--            android:layout_marginLeft="19dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:text="Active Appointment"-->
+<!--            android:textColor="#000000"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/llMenuBar3" />-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvAppointment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tvActiveAppointment"-->
+<!--            tools:listitem="@layout/list_appointment1"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
