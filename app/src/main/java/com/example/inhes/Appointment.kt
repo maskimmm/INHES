@@ -30,16 +30,15 @@ class Appointment : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         return true
     }
 
     private fun showDatabase(){
         ref = FirebaseDatabase.getInstance().getReference("Appointments")
         ref.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
+            override fun onCancelled(p0: DatabaseError) {}
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()){
                     list.clear()
