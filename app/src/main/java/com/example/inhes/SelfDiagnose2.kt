@@ -151,25 +151,6 @@ class SelfDiagnose2 : AppCompatActivity() {
                                        fatigue:Int,
                                        gastrointestinal:Int) {
 
-        // Api Declare
-//        val predictionInputs = PredictionObject(breathing_problem, fever, dry_cough, sore_throat, running_nose,
-//            asthma, chronic_lung_disease, headache, heart_disease, diabetes, hyper_tension, fatigue,
-//            gastrointestinal)
-//        ApiClient.instance.predictCovid19(predictionInputs).enqueue(object : Callback<String>{
-//            override fun onResponse(call: Call<String>, response: Response<String>) {
-//                Log.i("Sss", response.message()+" "+response.code()+" "+response.isSuccessful)
-//                if (response.code() == 400) {
-//                    Log.v("Error code 400", response.errorBody().toString())
-//                }
-//                Toast.makeText(this@MainActivity, response.code().toString() +" - "+response.body().toString(), Toast.LENGTH_LONG).show()
-//            }
-//
-//            override fun onFailure(call: Call<String>, t: Throwable) {
-//                Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_LONG).show()
-//            }
-//
-//        })
-
         ApiClient.instance.predictCovid19s(
                 breathing_problem, fever, dry_cough, sore_throat, running_nose,
                 asthma, chronic_lung_disease, headache, heart_disease, diabetes, hyper_tension, fatigue,

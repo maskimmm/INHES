@@ -35,6 +35,17 @@ class Login : AppCompatActivity() {
         }
     }
 
+    //check whether user already logged in or not
+    override fun onStart() {
+        super.onStart()
+        val user = auth.currentUser
+        if(user != null){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
     private fun signInUser(email: String, password: String){
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){task ->

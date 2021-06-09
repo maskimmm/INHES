@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 
+@Suppress("DEPRECATION")
 class Splash : AppCompatActivity() {
 
     private val splashTimeOut:Long = 3000

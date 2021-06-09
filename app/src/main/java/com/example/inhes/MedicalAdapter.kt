@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
+    @Suppress("DEPRECATION")
     class MedicalAdapter(private val listHero: ArrayList<MedicalDummies>):
         RecyclerView.Adapter<MedicalAdapter.ListViewHolder>(){
 

@@ -18,6 +18,7 @@ class Appointment : AppCompatActivity() {
         binding = ActivityAppointmentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
         supportActionBar!!.setTitle("Appointment")
 
         showDatabase()
@@ -26,6 +27,11 @@ class Appointment : AppCompatActivity() {
             val intent = Intent(this, CreateAppointment::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun showDatabase(){
@@ -53,40 +59,3 @@ class Appointment : AppCompatActivity() {
         binding.rvAppointment2.adapter = listHeroAdapter
     }
 }
-
-
-//package com.example.inhes
-//
-//import android.content.Intent
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import androidx.recyclerview.widget.LinearLayoutManager
-//import com.example.inhes.databinding.ActivityAppointmentBinding
-//
-//class Appointment : AppCompatActivity() {
-//
-//    private lateinit var binding: ActivityAppointmentBinding
-//    private var list: ArrayList<Appointments> = arrayListOf()
-//
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityAppointmentBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//        list.addAll(Dummy.listData)
-//        showRecyclerList()
-//
-//        binding.btnAddAppointment.setOnClickListener(){
-//            var intent = Intent(this, CreateAppointment::class.java)
-//            startActivity(intent)
-//        }
-//    }
-//
-//    private fun showRecyclerList() {
-//        binding.rvAppointment2.layoutManager = LinearLayoutManager(this)
-//        val listHeroAdapter = ActiveListAppointmentAdapter(list)
-//        binding.rvAppointment2.adapter = listHeroAdapter
-//    }
-//
-//}

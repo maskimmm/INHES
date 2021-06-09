@@ -18,7 +18,7 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
-        app:layout_constraintBottom_toTopOf="@+id/tvForgotPass"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,16 +65,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
-    <TextView
-        android:id="@+id/tvForgotPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="16dp"
-        android:text="Forgot Password?"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvForgotPass"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginRight="24dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="Forgot Password?"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnLogin"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -105,7 +105,9 @@
             android:id="@+id/tvCreateOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create One!"
+            android:text="@string/create_one"
+            android:textColor="@color/light_blue"
+            android:textStyle="italic"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="672dp" />
     </LinearLayout>
@@ -118,6 +120,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="109dp"
         android:text="Welcome\nBack"
+        android:textColor="@color/dark_blue"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

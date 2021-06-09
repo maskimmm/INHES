@@ -16,8 +16,8 @@ class MedicalKnowledge2 : AppCompatActivity() {companion object {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_medical_knowledge2)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setTitle("Detail")
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setTitle("Medical Knowledge")
 
         val tvNameReceived: TextView = findViewById(R.id.tvAbout2)
         val tvAboutReceived: TextView = findViewById(R.id.tvSubAbout)

@@ -27,10 +27,18 @@ class MedicalKnowledge : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMedicalKnowledgeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setTitle("Medical Knowledge")
 
         rv = findViewById(R.id.rvMedicalKnowledge)
         rv.setHasFixedSize(true)

@@ -13,17 +13,29 @@ class CreateAppointment : AppCompatActivity() {
     private lateinit var binding: ActivityCreateAppointmentBinding
     private lateinit var ref : DatabaseReference
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateAppointmentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar!!.setTitle("Create Appointment")
+
         ref = FirebaseDatabase.getInstance().getReference("Appointments")
 
         binding.btnCreateAppointment.setOnClickListener {
-            saveAppointmentData()
-            val intent = Intent(this, Appointment::class.java)
-            startActivity(intent)
-
+            if (binding.etAddPlace.text.trim().toString().isNotEmpty() && binding.etAddDate.text.trim().toString().isNotEmpty() && binding.etAddTime.text.trim().toString().isNotEmpty()){
+                saveAppointmentData()
+                val intent = Intent(this, Appointment::class.java)
+                startActivity(intent)
+            }else{
+                Toast.makeText(this,"Please Provide an Input",Toast.LENGTH_SHORT).show()
+            }
         }
 
     }
@@ -40,5 +52,7 @@ class CreateAppointment : AppCompatActivity() {
         ref.child(userId).setValue(user).addOnCompleteListener {
             Toast.makeText(this, "Appointment Created",Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }

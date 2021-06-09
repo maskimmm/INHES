@@ -15,12 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar!!.setTitle("Dashboard")
+        this.supportActionBar?.hide()
         auth = FirebaseAuth.getInstance()
 
         binding.btnExit.setOnClickListener{
             auth.signOut()
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, Splash::class.java)
             startActivity(intent)
         }
 

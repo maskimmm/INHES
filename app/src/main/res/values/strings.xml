@@ -10,4 +10,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_search_faskes">Map</string>
+    <string name="create_one"><u>Create One!</u></string>
+    <string name="sign_in"><u>Sign In!</u></string>
+    <string name="inhes">IN<b>HES</b></string>
 </resources>
